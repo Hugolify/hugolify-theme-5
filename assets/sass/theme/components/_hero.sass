@@ -1,0 +1,6 @@
+.hero
+    padding-top: calc(#{$header-height} + #{$spacer})
+    .btn:first-of-type
+        @include button-variant(white,white)
+    .btn + .btn
+        @include button-outline-variant(white)
