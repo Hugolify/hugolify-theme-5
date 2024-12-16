@@ -1,0 +1,46 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static
+
+
+params:
+  hero:
+    cover: 1600x660
+  casestudies:
+    thumbnail:
+      desktop: 306x459
+  expertises:
+    thumbnail:
+      desktop: 306x459
+  pages:
+    thumbnail:
+      desktop: 306x459
+  persons:
+    thumbnail:
+      desktop: 306x459
+  places:
+    thumbnail:
+      desktop: 306x459
+  products:
+    thumbnail:
+      desktop: 306x459
+  projects:
+    thumbnail:
+      desktop: 306x459
+  posts:
+    thumbnail:
+      desktop: 306x459
+  publications:
+    thumbnail:
+      desktop: 306x459
+  realestates:
+    thumbnail:
+      desktop: 306x459
+  services:
+    thumbnail:
+      desktop: 306x459

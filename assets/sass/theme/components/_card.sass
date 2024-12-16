@@ -1,0 +1,53 @@
+.card
+    --bs-card-bg: #333
+    --bs-card-bg-shadow: #{$light}
+    --bs-card-border-width: 0
+    --bs-card-border-radius: #{$border-radius}
+    --bs-card-spacer-x: 1.25rem
+    --bs-card-spacer-y: 1.25rem
+    --bs-card-cap-padding-y: 0
+    &::before
+        content: ''
+        background-color: var(--bs-card-bg-shadow)
+        border-radius: var(--bs-card-border-radius)
+        bottom: -5px
+        left: -5px
+        position: absolute
+        right: 5px
+        top: 5px
+        z-index: -1
+    .content,
+    .media
+        border-radius: var(--bs-card-border-radius)
+    .content
+        background: linear-gradient(to top, black, rgba(0,0,0,0) 50%)
+        bottom: 0
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+    .media
+        --bs-aspect-ratio: 150%
+        background-color: transparent
+    .metas
+        margin-bottom: 0
+        margin-top: .25rem
+    .metas,
+    time
+        color: rgba(255,255,255, .8)
+    .name
+        font-family: $font-family-sans-serif
+        font-weight: $font-weight-bold
+
+    @media (prefers-reduced-motion: no-preference)
+        &::before
+            transition: transform $transition-duration $transition-effect
+        &:hover::before
+            transform: translate3d(5px,-5px,0)
+        a:hover ~ .media
+            img
+                transform: none
