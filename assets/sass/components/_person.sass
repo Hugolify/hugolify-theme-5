@@ -1,2 +1,68 @@
-.person
+article.person
+    @include card
+
+aside.person
+    --bs-card-bg: #{$gray-200}
+    --bs-card-spacer-x: #{$gutter-mobile}
+    --bs-card-spacer-y: #{$gutter-mobile}
     @extend .card
+    @include media-breakpoint-down(md)
+        margin-left: - $gutter-mobile
+        margin-right: - $gutter-mobile
+    @include media-breakpoint-up(md)
+        --bs-card-spacer-x: 2rem
+        --bs-card-spacer-y: 2rem
+    .media
+        --bs-aspect-ratio: 100%
+        --card-media: 50%
+        --card-media-mobile: 50%
+        @extend .ratio
+        align-self: flex-start
+        border-radius: 50%
+        margin-left: var(--bs-card-spacer-x)
+        margin-top: var(--bs-card-spacer-y)
+        max-width: var(--card-media-mobile)
+        @include media-breakpoint-up(md)
+            max-width: var(--card-media)
+    .description
+        color: $text-muted
+        font-size: $small-font-size
+    ul
+        font-size: $small-font-size
+        list-style: none
+        line-height: 1.8
+        padding-left: 0
+        margin-bottom: 1.5rem
+        margin-top: 1.5rem
+        @if variable-exists(icons-map)
+            b
+                display: none
+            .email
+                &::before
+                    @include icon("envelope")
+                    margin-right: .5em
+            .fax
+                &::before
+                    @include icon("printer")
+                    margin-right: .5em
+            .phone
+                &::before
+                    @include icon("phone")
+                    margin-right: .5em
+    .btn
+        @include button-variant($primary,$primary)
+        text-wrap: balance
+    .more
+        @include more
+        font-size: $small-font-size
+
+    a::after
+        content: none
+
+    .sidebar > & + &
+        margin-top: - $spacer
+        @include media-breakpoint-up(md)
+            margin-top: calc(#{$global-spacing} * -1 + #{$spacer})
+
+    .content > &
+        flex-direction: row

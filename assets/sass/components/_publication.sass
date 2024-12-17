@@ -1,0 +1,12 @@
+.publication
+    @include card
+    .press
+        margin-bottom: 0
+        span
+            --bs-badge-font-weight: #{$font-weight-normal}
+            @extend .badge
+            background-color: $light
+            color: $black
+    .concerned,
+    .publications_concerned
+        font-size: $small-font-size

@@ -11,6 +11,7 @@ module:
 params:
   hero:
     cover: 1600x660
+    desktop: 526x220
   casestudies:
     thumbnail:
       desktop: 306x459

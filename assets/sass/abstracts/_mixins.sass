@@ -1,15 +1,17 @@
-.card
-    --bs-card-bg: #333
-    --bs-card-bg-shadow: #{$light}
+@mixin card
+    --bs-card-bg: #{$gray-900}
+    --bs-card-bg-shadow: #{$gray-300}
+    --bs-card-color: #FFFFFF
     --bs-card-border-width: 0
-    --bs-card-border-radius: #{$border-radius}
     --bs-card-spacer-x: 1.25rem
     --bs-card-spacer-y: 1.25rem
     --bs-card-cap-padding-y: 0
+    --bs-card-title-spacer-y: 0.25rem
+    @extend .card
     &::before
         content: ''
         background-color: var(--bs-card-bg-shadow)
-        border-radius: var(--bs-card-border-radius)
+        border-radius: $card-border-radius
         bottom: -5px
         left: -5px
         position: absolute
@@ -18,11 +20,10 @@
         z-index: -1
     .content,
     .media
-        border-radius: var(--bs-card-border-radius)
+        border-radius: $card-border-radius
     .content
         background: linear-gradient(to top, black, rgba(0,0,0,0) 50%)
         bottom: 0
-        color: white
         display: flex
         flex-direction: column
         justify-content: flex-end
@@ -37,11 +38,21 @@
         margin-bottom: 0
         margin-top: .25rem
     .metas,
-    time
-        color: rgba(255,255,255, .8)
+    .description
+        color: var(--bs-card-color)
+        opacity: .8
     .name
         font-family: $font-family-sans-serif
         font-weight: $font-weight-bold
+    time
+        color: inherit
+    time + .category
+        &::before
+            content: '—'
+            margin-left: .25rem
+            margin-right: .25rem
+    .btn
+        @include button-outline-variant($light)
 
     @media (prefers-reduced-motion: no-preference)
         &::before
