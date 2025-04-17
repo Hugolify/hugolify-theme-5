@@ -12,7 +12,7 @@
 {{- else -}}
   {{- $hero = dict "title" .Title "text" .Description -}}
 {{- end -}}
-<header class="{{ $class }}" {{- partial "func/SetAnim" (dict "element" "hero") }}>
+<header class="{{ $class }}" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
   {{ partial "commons/hero/cover.html" .Params.hero }}
   <div class="container">
     <div class="row">
