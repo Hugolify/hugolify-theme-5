@@ -1,0 +1,10 @@
+{{ with .}}
+  <section class="block-cta {{- with .background }} block-bg{{ end }}" {{ partial "func/SetAnim" (dict "element" "block") }}>
+    <div class="container">
+      <div>
+        {{- partial "blocks/heading.html" (dict "heading" .heading "container" false) -}}
+        {{ partial "commons/cta-group.html" . }}
+      </div>
+    </div>
+  </section>
+{{ end }}
