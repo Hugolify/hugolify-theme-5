@@ -1,5 +1,12 @@
 .hero
-    padding-top: calc(#{$header-height} + #{$spacer})
+    --header-height: #{$header-height-mobile}
+    margin-top: calc(var(--header-height) * -1)
+    @include media-breakpoint-up(lg)
+        --header-height: #{$header-height}
+    
+    .container
+        padding-top: var(--header-height)
+    
     .btn:first-of-type
         @include button-variant(white,white)
     .btn + .btn

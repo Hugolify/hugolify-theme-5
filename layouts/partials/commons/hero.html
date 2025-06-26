@@ -5,15 +5,24 @@
     {{- with .align -}}
       {{- $class = printf "%s hero-%s" $class . -}}
     {{- end -}}
-    {{- with .image -}}
-      {{- $class = printf "%s hero-with-image" $class -}}
-    {{- end -}}
   {{- end -}}
 {{- else -}}
   {{- $hero = dict "title" .Title "text" .Description -}}
+  {{- with .Params.image -}}
+    {{- $image := . -}}
+    {{- $image = $image | merge (dict "background_image" true "darken" true) -}}
+    {{- $hero = $hero | merge (dict "image" $image) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $hero.image -}}
+  {{- with .background_image -}}
+    {{- $class = printf "%s hero-with-cover" $class -}}
+  {{- else -}}
+    {{- $class = printf "%s hero-with-image" $class -}}
+  {{- end -}}
 {{- end -}}
 <header class="{{ $class }}" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
-  {{ partial "commons/hero/cover.html" .Params.hero }}
+  {{ partial "commons/hero/cover.html" $hero }}
   <div class="container">
     <div class="row">
       {{ partial "commons/hero/content.html" $hero }}
