@@ -2,6 +2,8 @@
     --bs-card-bg: #{$gray-900}
     --bs-card-bg-shadow: #{$gray-200}
     --bs-card-color: #FFFFFF
+    --bs-card-border-radius: 0
+    --bs-card-inner-border-radius: 0
     --bs-card-border-width: 0
     --bs-card-spacer-x: 1.25rem
     --bs-card-spacer-y: 1.25rem
@@ -54,6 +56,12 @@
     .btn
         @include button-outline-variant($light)
 
+    &:not(:has(.media))
+        .content
+            aspect-ratio: .75
+            position: relative
+
+  
     @media (prefers-reduced-motion: no-preference)
         &::before
             transition: transform $transition-duration $transition-effect
