@@ -10,16 +10,7 @@
     --bs-card-cap-padding-y: 0
     --bs-card-title-spacer-y: 0.25rem
     @extend .card
-    &::before
-        content: ''
-        background-color: var(--bs-card-bg-shadow)
-        border-radius: $card-border-radius
-        bottom: -5px
-        left: -5px
-        position: absolute
-        right: 5px
-        top: 5px
-        z-index: -1
+    box-shadow: -5px 5px 0 0 $shadow-color
     .content,
     .media
         border-radius: $card-border-radius
@@ -65,7 +56,8 @@
     @media (prefers-reduced-motion: no-preference)
         &::before
             transition: transform $transition-duration $transition-effect
-        &:hover::before
+        a:hover::before,
+        &:has(a)::before
             transform: translate3d(5px,-5px,0)
         a:hover ~ .media
             img

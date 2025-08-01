@@ -45,3 +45,7 @@ params:
   services:
     thumbnail:
       desktop: 306x459
+  blocks:
+    informations:
+      image:
+        ratio: 1.44
