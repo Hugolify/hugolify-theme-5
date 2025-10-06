@@ -1,0 +1,13 @@
+/*! purgecss start ignore */
+.block-bg
+    @include padding-bottom($global-spacing-double)
+    @include padding-top($global-spacing-double)
+section:not(.block-bg) + .block-bg
+    @include margin-top($global-spacing)
+.block-bg + section:not(.block-bg)
+    @include margin-top($global-spacing)
+.block-bg + .block-bg
+    padding-top: 0
+section.block-cta + .block-bg
+    @include margin-top($global-spacing-double)
+/*! purgecss end ignore */
