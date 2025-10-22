@@ -9,42 +9,56 @@ module:
 
 
 params:
+  thumbnail:
+    desktop: 306x459
+    mobile: 315x473
   hero:
     cover: 1600x660
     desktop: 526x220
   casestudies:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   expertises:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   pages:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   persons:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   places:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   products:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   projects:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   posts:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   publications:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   realestates:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   services:
     thumbnail:
       desktop: 306x459
+      mobile: 315x473
   blocks:
     informations:
       image:
