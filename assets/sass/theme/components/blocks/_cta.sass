@@ -1,12 +1,15 @@
 .block-cta
+    --block-cta-background-color: #{$primary}
+    --block-cta-color: white
+    --bs-heading-color: var(--block-cta-color)
     @include margin-bottom($global-spacing)
     @include margin-top($global-spacing)
     background-color: transparent
     padding: 0
     .container > div
-        background-color: $primary
+        background-color: var(--block-cta-background-color)
         border-radius: $border-radius-xl
-        color: white
+        color: var(--block-cta-color)
         padding: $gutter-mobile
         position: relative
         @include media-breakpoint-up(lg)
@@ -17,8 +20,9 @@
             &:not(:has([role="group"]))
                 transition: background .3s ease, color .3s ease
                 &:hover
-                    background-color: $light
-                    color: $primary
+                    --block-cta-background-color: white
+                    --block-cta-color: #{$primary}
+                    --bs-heading-color: var(--block-cta-color)
     .heading
         @include margin-bottom($global-spacing-semi)
     .cta
