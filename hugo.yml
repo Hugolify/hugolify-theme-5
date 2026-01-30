@@ -12,6 +12,7 @@ params:
   thumbnail:
     desktop: 306x459
     mobile: 315x473
+    scrollsnap: 242x363
   hero:
     cover: 1600x660
     desktop: 526x220
@@ -19,46 +20,57 @@ params:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   expertises:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   pages:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   persons:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   places:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   products:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   projects:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   posts:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   publications:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   realestates:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   services:
     thumbnail:
       desktop: 306x459
       mobile: 315x473
+      scrollsnap: 242x363
   blocks:
     informations:
       image:
