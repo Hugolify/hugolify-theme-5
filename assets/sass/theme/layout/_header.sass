@@ -13,5 +13,5 @@ header[role="banner"]
         background-color: $header-background-color
         border-radius: 2.75rem
         padding: .75rem 1.75rem
-
-    
+        @include media-breakpoint-up(xxl)
+            max-width: calc(#{map-get($container-max-widths, xxl)} + #{$grid-gutter-width})
