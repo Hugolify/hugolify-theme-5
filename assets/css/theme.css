@@ -1,0 +1,38 @@
+/* theme.css */
+/*
+ * Theme 5 for hugolify-theme-design-system.
+ *
+ * The design system imports "theme.css" last in its own css/main.css and ships
+ * an empty file under that name: this module is declared before it in
+ * module.yaml, so this file shadows that placeholder. The same goes for the
+ * generated tokens/theme.css.
+ *
+ * What lives here: only what the tokens cannot say. Every value that is a
+ * design decision sits in assets/tokens/theme/ and reaches the CSS as a custom
+ * property; the token files name the SASS variable each one replaces.
+ */
+
+/* Base */
+@import './theme/base/fonts.css';
+@import './theme/base/typography.css';
+
+/* Layouts */
+@import './theme/layouts/header.css';
+
+/* Components */
+@import './theme/components/btn.css';
+@import './theme/components/hero.css';
+@import './theme/components/item.css';
+@import './theme/components/items.css';
+@import './theme/components/publication.css';
+
+/* Blocks */
+@import './theme/components/blocks/block-comparison.css';
+@import './theme/components/blocks/block-cta.css';
+@import './theme/components/blocks/block-informations.css';
+@import './theme/components/blocks/block-testimonials.css';
+
+/* Pages */
+@import './theme/pages/home.css';
+@import './theme/pages/person.css';
+@import './theme/pages/post.css';

@@ -1,0 +1,51 @@
+/* theme/components/btn.css */
+/*
+ * Theme 5 buttons are uppercase, letter-spaced, and led by an arrow that slides
+ * forward under the pointer: the link-arrow mixin of the SASS theme, redrawn as
+ * a masked icon the way the design system draws .more and .back.
+ *
+ * The arrow is only for buttons that go somewhere. Controls that open, close or
+ * filter something in place keep a bare label, which is what the :not() list is
+ * for: the component classes of @uncinq/css-components, the in-page anchors,
+ * and anything wired to a panel.
+ */
+@layer components {
+  .btn {
+    letter-spacing: var(--btn-letter-spacing);
+  }
+
+  .btn:not(
+    .btn-close,
+    .btn-filter,
+    .btn-menu,
+    .btn-search,
+    .btn-share,
+    .btn-toc,
+    .btn-toggle-video,
+    .js-dialog-toggle,
+    .js-dropdown-toggle,
+    [aria-controls],
+    [href^='#']
+  ) {
+    &::before {
+      background-color: currentColor;
+      content: '';
+      flex-shrink: 0;
+      height: var(--btn-icon-size);
+      margin-inline-start: var(--btn-icon-margin-inline-start);
+      mask: var(--btn-icon) center / var(--btn-icon-size) no-repeat;
+      width: var(--btn-icon-size);
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: translate var(--btn-icon-transition-duration)
+          var(--btn-icon-transition-easing);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::before {
+        translate: var(--btn-icon-translate-hover);
+      }
+    }
+  }
+}

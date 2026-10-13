@@ -1,4 +1,6 @@
-<a href="{{ .Permalink }}" itemprop="url" class="content">
-  {{ partial "posts/item/metas" . }}
-  {{ partial "commons/item/title" . }}
+{{- /* posts/item/content.html: date and categories above the title, no
+       description and no "read more": the card is the image */ -}}
+<a href="{{ .Permalink }}" class="content">
+  {{ partial "posts/item/metas.html" . }}
+  {{ partial "commons/item/title.html" . }}
 </a>

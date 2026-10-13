@@ -1,0 +1,97 @@
+/* theme/components/item.css */
+/*
+ * The cover card of theme 5: the image covers the whole card, a shade rises
+ * from its bottom edge and the text sits over it, in white. A flat shadow is
+ * offset to the bottom left. Without an image the card keeps the shape of one,
+ * dark.
+ *
+ * It dresses the item types the SASS theme dressed with its card mixin, and the
+ * informations of a block that come with an image. The other types
+ * (documentation, products...) keep the item of the design system.
+ */
+@layer components {
+  .item:is(
+    .casestudy,
+    .expertise,
+    .page,
+    .person,
+    .place,
+    .post,
+    .project,
+    .publication,
+    .realestate,
+    .service
+  ),
+  .block-informations .item:has(.media-image) {
+    --btn-color-background: transparent;
+    --btn-color-background-hover: var(--color-light);
+    --btn-color-border: var(--color-light);
+    --btn-color-border-hover: var(--color-light);
+    --btn-color-text: var(--color-light);
+    --btn-color-text-hover: var(--color-text-on-light);
+    --item-border-radius: var(--radius-none);
+    --item-border-width: var(--border-width-none);
+    --item-color-background: var(--item-cover-color-background);
+    --item-color-text: var(--item-cover-color-text);
+    --item-gap: var(--spacing-2xs);
+    --item-media-border-radius: var(--radius-none);
+    --item-media-border-width: var(--border-width-none);
+    --item-media-color-background: transparent;
+    --item-media-ratio: var(--item-cover-media-ratio);
+    --item-metas-color-background: transparent;
+    --item-metas-color-text: var(--item-cover-color-text);
+    --item-metas-font-size: var(--font-size-small);
+    --item-metas-order: 0;
+    --item-metas-padding-block-end: 0;
+    --item-metas-padding-block-start: 0;
+    --item-metas-padding-inline: 0;
+    --item-padding-block-end: var(--item-cover-padding);
+    --item-padding-block-start: var(--item-cover-padding);
+    --item-padding-inline: var(--item-cover-padding);
+    --item-shadow: var(--item-cover-shadow);
+    --item-shadow-hover: var(--item-cover-shadow);
+    --item-title-color: var(--item-cover-color-text);
+    --item-title-font-family: var(--item-cover-title-font-family);
+    --item-title-font-size: var(--item-cover-title-font-size);
+    --item-title-font-weight: var(--item-cover-title-font-weight);
+    --item-title-line-height: var(--item-cover-title-line-height);
+
+    /* The image and the text share one grid cell: the card is as tall as the
+       image or as the text, whichever is taller, so a long title on a short
+       image grows the card rather than spilling out of it */
+    display: grid;
+
+    > .content,
+    > .media {
+      grid-area: 1 / 1;
+    }
+
+    /* Over the image, gathered at its bottom edge */
+    .content {
+      background-image: linear-gradient(
+        to top,
+        var(--item-cover-gradient-color-from),
+        var(--item-cover-gradient-color-to) var(--item-cover-gradient-stop)
+      );
+      justify-content: flex-end;
+      z-index: 1;
+    }
+
+    .description,
+    .metas {
+      opacity: var(--item-cover-metas-opacity);
+    }
+
+    /* The date and the categories run as one line of text that wraps, where
+       the design system lays them out as a flex row */
+    .metas {
+      display: block;
+    }
+
+    /* The design system pushes the button to the bottom of the card with an
+       auto margin, which here would lift the text away from it */
+    .btn {
+      margin-block-start: var(--spacing-xs);
+    }
+  }
+}

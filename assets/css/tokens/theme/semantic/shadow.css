@@ -1,0 +1,8 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/semantic/shadow.css */
+@layer tokens {
+  :root {
+    --shadow-offset: -5px 5px 0 0 var(--color-shadow-offset);
+  }
+}

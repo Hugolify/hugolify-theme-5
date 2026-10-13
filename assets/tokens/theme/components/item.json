@@ -1,0 +1,78 @@
+{
+  "item": {
+    "cover": {
+      "color": {
+        "background": {
+          "$value": "{color.dark.default}",
+          "$type": "color",
+          "$description": "--bs-card-bg $gray-900: the card behind its image, and the whole card when there is none."
+        },
+        "text": {
+          "$value": "{color.text.onDark}",
+          "$type": "color",
+          "$description": "--bs-card-color #FFF."
+        }
+      },
+      "gradient": {
+        "color": {
+          "from": {
+            "$value": "{color.black}",
+            "$type": "color",
+            "$description": "linear-gradient(to top, black, transparent 50%): the shade that keeps the text readable over the image."
+          },
+          "to": {
+            "$value": "transparent",
+            "$type": "color"
+          }
+        },
+        "stop": {
+          "$value": "50%",
+          "$type": "dimension"
+        }
+      },
+      "media": {
+        "ratio": {
+          "$value": "2 / 3",
+          "$type": "string",
+          "$description": "--bs-aspect-ratio 150%. The thumbnail params set the same ratio on .media; this one holds where they set none."
+        }
+      },
+      "metas": {
+        "opacity": {
+          "$value": "0.8",
+          "$type": "number"
+        }
+      },
+      "padding": {
+        "$value": "{size.20}",
+        "$type": "dimension",
+        "$description": "--bs-card-spacer-x and -y 1.25rem."
+      },
+      "shadow": {
+        "$value": "{shadow.offset}",
+        "$type": "shadow",
+        "$description": "It stays put under the pointer."
+      },
+      "title": {
+        "fontFamily": {
+          "$value": "{fontFamily.text}",
+          "$type": "fontFamily",
+          "$description": "The card titles are set in the text font, bold, where every other title is in Playfair."
+        },
+        "fontSize": {
+          "$value": "{size.20}",
+          "$type": "dimension",
+          "$description": "$h5-font-size 1.25rem."
+        },
+        "fontWeight": {
+          "$value": "{fontWeight.bold}",
+          "$type": "fontWeight"
+        },
+        "lineHeight": {
+          "$value": "{lineHeight.tight}",
+          "$type": "number"
+        }
+      }
+    }
+  }
+}

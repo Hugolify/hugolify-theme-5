@@ -1,0 +1,9 @@
+/* theme/components/blocks/block-testimonials.css */
+@layer components {
+  /* Square, on the tinted surface the design system already gives them, with
+     the flat offset shadow of theme 5 */
+  .block-testimonials .quote {
+    --quote-border-radius: var(--radius-surface);
+    box-shadow: var(--shadow-offset);
+  }
+}

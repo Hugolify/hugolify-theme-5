@@ -1,0 +1,15 @@
+{
+  "shadow": {
+    "offset": {
+      "$value": {
+        "offsetX": "-5px",
+        "offsetY": "5px",
+        "blur": "0",
+        "spread": "0",
+        "color": "{color.shadow.offset}"
+      },
+      "$type": "shadow",
+      "$description": "box-shadow: -5px 5px 0 0 $shadow-color, the flat shadow of theme 5: the cards and the items of the comparison, informations and testimonials blocks."
+    }
+  }
+}

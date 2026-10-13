@@ -1,4 +1,6 @@
-<a href="{{ .Permalink }}" itemprop="url" class="content">
+{{- /* casestudies/item/content.html: the date above the title, no
+       description */ -}}
+<a href="{{ .Permalink }}" class="content">
   {{ partial "commons/time.html" (dict "date" .Date "format" ":date_long") }}
-  {{ partial "commons/item/title" . }}
+  {{ partial "commons/item/title.html" . }}
 </a>

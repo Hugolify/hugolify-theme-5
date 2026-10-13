@@ -1,0 +1,24 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/semantic/color.css */
+@layer tokens {
+  :root {
+    --color-gray-100: oklch(96.42% 0 0);
+    --color-gray-200: oklch(92.49% 0 0);
+    --color-gray-300: oklch(76.68% 0 0);
+    --color-gray-400: oklch(68.30% 0 0);
+    --color-gray-500: oklch(59.99% 0 0);
+    --color-gray-600: oklch(51.03% 0 0);
+    --color-gray-700: oklch(42.02% 0 0);
+    --color-gray-800: oklch(32.11% 0 0);
+    --color-gray-900: oklch(21.78% 0 0);
+    --color-brand: var(--color-black);
+    --color-brand-hover: var(--color-gray-800);
+    --color-brand-muted: var(--color-gray-100);
+    --color-brand-strong: var(--color-black);
+    --color-heading: var(--color-text);
+    --color-light: var(--color-gray-100);
+    --color-light-hover: var(--color-gray-200);
+    --color-shadow-offset: var(--color-gray-200);
+  }
+}

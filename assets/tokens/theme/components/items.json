@@ -1,0 +1,56 @@
+{
+  "items": {
+    "cover": {
+      "carousel": {
+        "maxWidth": {
+          "default": {
+            "$value": "85vw",
+            "$type": "dimension",
+            "$description": "$scroll-snap-sm 85%: below --sm the cards scroll sideways, one and a bit in view."
+          },
+          "tablet": {
+            "$value": "45vw",
+            "$type": "dimension",
+            "$description": "$scroll-snap-md 45%, from --sm: two and a bit in view."
+          }
+        }
+      },
+      "cols": {
+        "default": {
+          "$value": "1",
+          "$type": "number",
+          "$description": "row-cols-1."
+        },
+        "tablet": {
+          "$value": "3",
+          "$type": "number",
+          "$description": "row-cols-md-3, from --sm."
+        },
+        "desktop": {
+          "$value": "4",
+          "$type": "number",
+          "$description": "row-cols-lg-4, from --md."
+        }
+      },
+      "gap": {
+        "column": {
+          "$value": "{size.24}",
+          "$type": "dimension",
+          "$description": "$grid-gutter-width 1.5rem."
+        },
+        "row": {
+          "default": {
+            "$value": "{size.40}",
+            "$type": "dimension",
+            "$description": "--bs-gutter-y $global-spacing / 2."
+          },
+          "tablet": {
+            "$value": "{size.80}",
+            "$type": "dimension",
+            "$description": "--bs-gutter-y $global-spacing 5rem, from --sm: the rows of cards stand well apart."
+          }
+        }
+      }
+    }
+  }
+}

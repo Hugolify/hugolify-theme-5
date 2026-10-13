@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/logo.css */
+@layer tokens {
+  :root {
+    --logo-color: var(--color-black);
+    --logo-font-size: var(--font-size-lg);
+  }
+}

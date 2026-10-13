@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/semantic/radius.css */
+@layer tokens {
+  :root {
+    --radius-control: var(--radius-xs);
+    --radius-surface: var(--radius-none);
+  }
+}

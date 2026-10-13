@@ -1,3 +1,5 @@
-<a href="{{ .Permalink }}" itemprop="url" class="content">
-  {{ partial "commons/item/title" . }}
+{{- /* pages/item/content.html: the title alone over the image, no
+       description and no "read more" */ -}}
+<a href="{{ .Permalink }}" class="content">
+  {{ partial "commons/item/title.html" . }}
 </a>

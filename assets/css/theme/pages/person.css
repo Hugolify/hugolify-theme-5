@@ -1,0 +1,14 @@
+/* theme/pages/person.css */
+@layer pages {
+  /* The contact card in the hero of a person lies on the black ground: a veil
+     of the hero text colour, where the tinted surface of the design system
+     would lose the white links of the hero. Declared here and not as a token,
+     so the veil follows a hero theme. */
+  .page-persons .hero .contact-card {
+    --card-color-background: oklch(
+      from var(--hero-color-text) l c h / var(--hero-contact-card-opacity)
+    );
+    --card-color-text: var(--hero-color-text);
+    --card-title-color: var(--hero-title-color);
+  }
+}

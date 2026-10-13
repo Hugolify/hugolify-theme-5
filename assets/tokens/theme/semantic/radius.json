@@ -1,0 +1,14 @@
+{
+  "radius": {
+    "control": {
+      "$value": "{radius.xs}",
+      "$type": "dimension",
+      "$description": "$border-radius 0.25rem, the fields and the small controls. The buttons are pills, see components/btn.json."
+    },
+    "surface": {
+      "$value": "{radius.none}",
+      "$type": "dimension",
+      "$description": "$card-border-radius 0: the cards and the panels of theme 5 are square. The call to action and the header carry their own radius."
+    }
+  }
+}

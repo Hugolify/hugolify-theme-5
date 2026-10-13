@@ -1,0 +1,14 @@
+{
+  "logo": {
+    "color": {
+      "$value": "{color.black}",
+      "$type": "color",
+      "$description": "$header-color #000."
+    },
+    "fontSize": {
+      "$value": "{fontSize.lg}",
+      "$type": "dimension",
+      "$description": "1.5rem, the text logo set in Playfair like the headings."
+    }
+  }
+}

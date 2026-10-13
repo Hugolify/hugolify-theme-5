@@ -1,0 +1,10 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/quote.css */
+@layer tokens {
+  :root {
+    --quote-font-size: min(1.425rem + 2.1vw, 3rem);
+    --quote-font-style: normal;
+    --quote-line-height: var(--line-height-tight);
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "quote": {
+    "fontSize": {
+      "$value": "min(1.425rem + 2.1vw, 3rem)",
+      "$type": "dimension",
+      "$description": "$blockquote-font-size 3rem, on the RFS curve of the headings. Also read by the blockquote of the content, see theme/base/typography.css."
+    },
+    "fontStyle": {
+      "$value": "normal",
+      "$type": "string",
+      "$description": "Upright, where the design system sets quotes in italic."
+    },
+    "lineHeight": {
+      "$value": "{lineHeight.tight}",
+      "$type": "number",
+      "$description": "$headings-line-height 1.1, the quotes are set like the headings."
+    }
+  }
+}

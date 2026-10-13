@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/surtitle.css */
+@layer tokens {
+  :root {
+    --surtitle-font-size: var(--font-size-2xs);
+    --surtitle-font-weight: var(--font-weight-normal);
+  }
+}

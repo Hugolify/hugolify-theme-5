@@ -1,0 +1,95 @@
+{
+  "color": {
+    "gray": {
+      "100": {
+        "$value": "oklch(96.42% 0 0)",
+        "$type": "color",
+        "$description": "$gray-100 #F3F3F3, also $light. The grays of theme 5 are neutral, where the design system's lean blue: every semantic token built on them follows."
+      },
+      "200": {
+        "$value": "oklch(92.49% 0 0)",
+        "$type": "color",
+        "$description": "$gray-200 #E6E6E6."
+      },
+      "300": {
+        "$value": "oklch(76.68% 0 0)",
+        "$type": "color",
+        "$description": "$gray-300 #B3B3B3."
+      },
+      "400": {
+        "$value": "oklch(68.30% 0 0)",
+        "$type": "color",
+        "$description": "$gray-400 #999999."
+      },
+      "500": {
+        "$value": "oklch(59.99% 0 0)",
+        "$type": "color",
+        "$description": "$gray-500 #808080."
+      },
+      "600": {
+        "$value": "oklch(51.03% 0 0)",
+        "$type": "color",
+        "$description": "$gray-600 #666666."
+      },
+      "700": {
+        "$value": "oklch(42.02% 0 0)",
+        "$type": "color",
+        "$description": "$gray-700 #4D4D4D."
+      },
+      "800": {
+        "$value": "oklch(32.11% 0 0)",
+        "$type": "color",
+        "$description": "$gray-800 #333333, also $secondary."
+      },
+      "900": {
+        "$value": "oklch(21.78% 0 0)",
+        "$type": "color",
+        "$description": "$gray-900 #1A1A1A, the body colour and the surface of the cards."
+      }
+    },
+    "brand": {
+      "default": {
+        "$value": "{color.black}",
+        "$type": "color",
+        "$description": "$primary #000."
+      },
+      "hover": {
+        "$value": "{color.gray.800}",
+        "$type": "color",
+        "$description": "$secondary #333."
+      },
+      "muted": {
+        "$value": "{color.gray.100}",
+        "$type": "color",
+        "$description": "$light."
+      },
+      "strong": {
+        "$value": "{color.black}",
+        "$type": "color"
+      }
+    },
+    "heading": {
+      "$value": "{color.text.default}",
+      "$type": "color",
+      "$description": "Headings take the body colour, as in Bootstrap, where the design system sets them in black."
+    },
+    "light": {
+      "default": {
+        "$value": "{color.gray.100}",
+        "$type": "color",
+        "$description": "$light $gray-100, one step lighter than the design system's: the light themes and the buttons over a darkened cover."
+      },
+      "hover": {
+        "$value": "{color.gray.200}",
+        "$type": "color"
+      }
+    },
+    "shadow": {
+      "offset": {
+        "$value": "{color.gray.200}",
+        "$type": "color",
+        "$description": "$shadow-color #E6E6E6: the flat shadow offset to the bottom left of the cards and of the items of the comparison, informations and testimonials blocks."
+      }
+    }
+  }
+}

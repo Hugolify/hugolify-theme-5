@@ -1,0 +1,14 @@
+{
+  "spacing": {
+    "heading": {
+      "$value": "{size.24}",
+      "$type": "dimension",
+      "$description": "$headings-margin-bottom 1.5rem."
+    },
+    "typography": {
+      "$value": "{size.24}",
+      "$type": "dimension",
+      "$description": "$paragraph-margin-bottom 1.5rem."
+    }
+  }
+}

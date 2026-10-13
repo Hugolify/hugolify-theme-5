@@ -1,0 +1,44 @@
+{
+  "block": {
+    "cta": {
+      "box": {
+        "borderRadius": {
+          "default": {
+            "$value": "{radius.2xl}",
+            "$type": "dimension",
+            "$description": "$border-radius-xl 2rem."
+          },
+          "desktop": {
+            "$value": "{size.64}",
+            "$type": "dimension",
+            "$description": "$border-radius-xxl 4rem, from --md."
+          }
+        },
+        "color": {
+          "background": {
+            "$value": "{color.brand.default}",
+            "$type": "color",
+            "$description": "--block-cta-background-color $primary. A block theme replaces it, and the two colours swap under the pointer: see theme/components/blocks/block-cta.css."
+          },
+          "text": {
+            "$value": "{color.text.onBrand}",
+            "$type": "color",
+            "$description": "--block-cta-color white."
+          }
+        },
+        "padding": {
+          "default": {
+            "$value": "{size.30}",
+            "$type": "dimension",
+            "$description": "$gutter-mobile 1.875rem."
+          },
+          "desktop": {
+            "$value": "{size.80}",
+            "$type": "dimension",
+            "$description": "$global-spacing 5rem, from --md."
+          }
+        }
+      }
+    }
+  }
+}

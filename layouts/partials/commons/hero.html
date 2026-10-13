@@ -1,32 +1,55 @@
-{{- $class := "hero" -}}
-{{- $hero := .Params.hero -}}
-{{- if partial "func/HasHero" . -}}
-  {{- with $hero -}}
-    {{- with .align -}}
-      {{- $class = printf "%s hero-%s" $class . -}}
+{{- /*
+  commons/hero.html overrides the core partial: in theme 5 every page opens
+  on a hero, not only the pages whose front matter asks for one.
+
+  A page with a hero in its front matter gets it, as in the core. Any other
+  page gets one built from its own title and description, with its image laid
+  behind as a darkened cover. commons/heading.html is emptied for the same
+  reason: the title is already in the hero.
+
+  The rest is the core partial, copied because a partial cannot call the file
+  it shadows: keep it in step with hugolify-theme/v2.
+*/ -}}
+
+{{- /* Modules may hand another page as context (term pages show their
+       section's hero): that hero stays out of the index, it is indexed on its
+       own page and its h1 would title every term in the results. A map
+       context is built by the caller for the page being rendered. */ -}}
+{{- $searchAttr := partial "func/SetSearchBody.html" page -}}
+{{- if and (not (reflect.IsMap .)) (ne . page) -}}
+  {{- $searchAttr = partial "func/SetSearchIgnore.html" . -}}
+{{- end -}}
+
+{{- $hero := .Params.hero | default dict -}}
+{{- if not (partial "func/HasHero" .) -}}
+  {{- /* A taxonomy term only carries a key, the title it deserves is the one of
+         the page it stands for, as in the core's commons/heading.html.
+         GetRealContext reads a map as its own arguments, so a map context
+         keeps its title. */ -}}
+  {{- $title := .Title -}}
+  {{- if not (reflect.IsMap .) -}}
+    {{- $title = (partial "func/GetRealContext.html" .).Title -}}
+  {{- end -}}
+  {{- $hero = dict "title" $title "text" .Description -}}
+  {{- with .Params.image -}}
+    {{- if and (reflect.IsMap .) .src -}}
+      {{- $hero = merge $hero (dict "image" (merge . (dict "background_image" true "darken" true))) -}}
     {{- end -}}
   {{- end -}}
-{{- else -}}
-  {{- $hero = dict "title" .Title "text" .Description -}}
-  {{- with .Params.image -}}
-    {{- $image := . -}}
-    {{- $image = $image | merge (dict "background_image" true "darken" true) -}}
-    {{- $hero = $hero | merge (dict "image" $image) -}}
+{{- end -}}
+
+{{- /* Expose the page kind in the hero context, which is rebound to the hero */ -}}
+{{- with merge $hero (dict "Parent" .Parent) -}}
+  {{- if or .title .text -}}
+    {{- $class := partial "func/GetHeroClasses" . -}}
+    <header class="{{ $class }}" {{- $searchAttr }} {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
+      {{ partial "commons/hero/cover.html" . }}
+      <div class="container">
+        <div class="row">
+          {{ partial "commons/hero/content.html" . }}
+          {{ partial "commons/hero/media.html" . }}
+        </div>
+      </div>
+    </header>
   {{- end -}}
 {{- end -}}
-{{- with $hero.image -}}
-  {{- with .background_image -}}
-    {{- $class = printf "%s hero-with-cover" $class -}}
-  {{- else -}}
-    {{- $class = printf "%s hero-with-image" $class -}}
-  {{- end -}}
-{{- end -}}
-<header class="{{ $class }}" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
-  {{ partial "commons/hero/cover.html" $hero }}
-  <div class="container">
-    <div class="row">
-      {{ partial "commons/hero/content.html" $hero }}
-      {{ partial "commons/hero/media.html" $hero }}
-    </div>
-  </div>
-</header>

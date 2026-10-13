@@ -28,14 +28,17 @@
     .media
         --bs-aspect-ratio: 150%
         background-color: transparent
+    // Block, not the flex row of the core: v2 drops the <p> that kept the
+    // date and the category on one wrapping line
     .metas
+        display: block
         margin-bottom: 0
         margin-top: .25rem
     .metas,
     .description
         color: var(--bs-card-color)
         opacity: .8
-    .name
+    .title
         font-family: $font-family-sans-serif
         font-weight: $font-weight-bold
     time

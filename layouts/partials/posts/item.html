@@ -1,4 +1,6 @@
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
-  {{ partial "posts/item/content" . }}
-  {{ partial "posts/item/media" . }}
+{{- /* posts/item.html: the metas move into the link, over the image (see
+       posts/item/content.html) */ -}}
+<article class="item post" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+  {{ partial "posts/item/content.html" . }}
+  {{ partial "posts/item/media.html" . }}
 </article>

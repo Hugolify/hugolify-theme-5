@@ -1,1 +1,7 @@
-{{ partial "commons/latest.html" (dict "section" "places" "limit" 4) }}
+{{- /* places/latest.html: four items, one full row of the theme's grid.
+       Guarded, unlike the module's own: the home page calls this partial
+       whenever it exists, and this theme makes it exist even where the
+       places module is not installed. */ -}}
+{{- if templates.Exists "partials/places/items.html" -}}
+  {{ partial "commons/latest.html" (dict "section" "places" "limit" 4) }}
+{{- end -}}

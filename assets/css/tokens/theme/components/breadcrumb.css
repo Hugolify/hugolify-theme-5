@@ -1,0 +1,8 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/breadcrumb.css */
+@layer tokens {
+  :root {
+    --breadcrumb-font-size: var(--font-size-2xs);
+  }
+}

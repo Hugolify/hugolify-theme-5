@@ -1,0 +1,18 @@
+/* theme/pages/post.css */
+@layer pages {
+  /* The metas open the sidebar of a post (see layouts/partials/posts/sidebar.html):
+     stacked, without separators, the share button under them. */
+  .page-posts .sidebar .metas {
+    align-items: start;
+    flex-direction: column;
+
+    > *::before {
+      content: none;
+    }
+
+    .share {
+      margin-block-start: var(--spacing-xs);
+      margin-inline-start: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/* theme/pages/home.css */
+@layer pages {
+  /* The home hero is taller and its title larger. css-base sets the size of
+     each heading on the heading itself, so the h1 is reached directly. */
+  .home-page .hero {
+    @media (--sm) {
+      --hero-home-min-height: var(--hero-home-min-height-tablet);
+    }
+
+    h1 {
+      --font-size-heading: var(--hero-home-title-font-size);
+    }
+  }
+}

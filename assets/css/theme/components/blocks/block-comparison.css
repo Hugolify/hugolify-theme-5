@@ -1,0 +1,8 @@
+/* theme/components/blocks/block-comparison.css */
+@layer components {
+  /* The flat offset shadow of theme 5, which stays put under the pointer */
+  .block-comparison .item {
+    --item-shadow: var(--shadow-offset);
+    --item-shadow-hover: var(--shadow-offset);
+  }
+}

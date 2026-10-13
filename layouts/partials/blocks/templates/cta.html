@@ -1,10 +1,31 @@
-{{ with .}}
-  <section class="block-cta {{- with .background }} block-bg{{ end }}" {{ partial "func/SetAnim" (dict "element" "block") }}>
-    <div class="container">
-      <div>
-        {{- partial "blocks/heading.html" (dict "heading" .heading "container" false) -}}
-        {{ partial "commons/cta-group.html" . }}
-      </div>
-    </div>
-  </section>
-{{ end }}
+{{- /*
+  blocks/templates/cta.html overrides the core template to wrap the heading,
+  the buttons and the footing in one more element, .block-cta-box.
+
+  Theme 5 draws the call to action as a rounded panel that sits inside the
+  container, and .block-content cannot carry it: with no grid set it is the
+  container itself, gutters included.
+
+  The rest is the core template, copied because a partial cannot call the
+  file it shadows: keep it in step with hugolify-theme/v2.
+*/ -}}
+
+{{/* UI */}}
+{{- $ui := partial "func/GetBlockUI" (merge (dict "type" "cta") .) -}}
+
+{{/* Class */}}
+{{- $blockClass := partial "func/GetBlockClasses" (dict "type" "cta" "ui" $ui) -}}
+
+{{/* Context */}}
+{{- $context := merge . (dict "ui" $ui) -}}
+
+{{/* Block */}}
+<section class="{{- $blockClass }}" {{- partial "func/SetAnim.html" (dict "element" "block") }}>
+{{- partial "func/SetContainerRowColStart.html" (dict "grid" $ui.grid "class" $ui.rowClass) -}}
+  <div class="block-cta-box">
+    {{ partial "blocks/templates/cta/header.html" . }}
+    {{ partial "blocks/templates/cta/body.html" $context }}
+    {{ partial "blocks/templates/cta/footer.html" . }}
+  </div>
+{{- partial "func/SetContainerRowColEnd.html" (dict "grid" $ui.grid "class" $ui.rowClass) -}}
+</section>

@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "color": {
+      "background": {
+        "$value": "{color.black}",
+        "$type": "color",
+        "$description": "$hero-background-color #000."
+      },
+      "link": {
+        "$value": "{color.white}",
+        "$type": "color",
+        "$description": "$hero-color #FFF."
+      },
+      "text": {
+        "$value": "{color.white}",
+        "$type": "color",
+        "$description": "$hero-color #FFF."
+      }
+    },
+    "contactCard": {
+      "opacity": {
+        "$value": "0.125",
+        "$type": "number",
+        "$description": "#FFFFFF20: the contact card in the hero of a person is a veil of the hero text colour, see theme/pages/person.css."
+      }
+    },
+    "height": {
+      "$value": "auto",
+      "$type": "dimension",
+      "$description": "The hero grows with its content from its min-height, where the design system fixes its height."
+    },
+    "maxHeight": {
+      "$value": "none",
+      "$type": "dimension"
+    },
+    "media": {
+      "brightness": {
+        "$value": "0.3",
+        "$type": "number",
+        "$description": "A cover image is darkened to 30%, where the design system stops at 50%: the white text over it stays readable on any photograph."
+      }
+    },
+    "minHeight": {
+      "default": {
+        "$value": "calc(25rem - var(--header-height))",
+        "$type": "dimension",
+        "$description": "$hero-min-height-mobile 400px, header included: the hero slides under the header, see theme/components/hero.css."
+      },
+      "tablet": {
+        "$value": "calc(31.25rem - var(--header-height))",
+        "$type": "dimension",
+        "$description": "$hero-min-height 500px, header included."
+      }
+    },
+    "home": {
+      "height": {
+        "$value": "auto",
+        "$type": "dimension"
+      },
+      "minHeight": {
+        "default": {
+          "$value": "calc(37.5rem - var(--header-height))",
+          "$type": "dimension",
+          "$description": "$home-hero-min-height-mobile 600px, header included."
+        },
+        "tablet": {
+          "$value": "calc(43.75rem - var(--header-height))",
+          "$type": "dimension",
+          "$description": "$home-hero-min-height 700px, header included."
+        }
+      },
+      "title": {
+        "fontSize": {
+          "$value": "min(1.725rem + 5.7vw, 6rem)",
+          "$type": "dimension",
+          "$description": "$home-hero-h1-font-size 6rem, on the RFS curve of the headings."
+        }
+      }
+    },
+    "paddingBlockEnd": {
+      "$value": "min(1.625rem + 4.5vw, 5rem)",
+      "$type": "dimension",
+      "$description": "$global-spacing 5rem under the content, RFS like the SASS theme's padding-bottom. Flat rather than under padding.block, which @uncinq/component-tokens already defines as a token."
+    },
+    "title": {
+      "color": {
+        "$value": "{color.white}",
+        "$type": "color"
+      }
+    }
+  }
+}

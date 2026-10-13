@@ -1,0 +1,19 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/header.css */
+@layer tokens {
+  :root {
+    --header-color-background: transparent;
+    --header-color-link: var(--color-black);
+    --header-color-text: var(--color-black);
+    --header-height: 98px;
+    --header-height-expand: 106px;
+    --header-nav-border-radius: var(--size-44);
+    --header-nav-color-background: var(--color-white);
+    --header-nav-padding-block: var(--size-12);
+    --header-nav-padding-inline: var(--size-28);
+    --header-padding-block: var(--size-16);
+    --header-padding-inline: var(--size-30);
+    --header-shadow: var(--shadow-none);
+  }
+}

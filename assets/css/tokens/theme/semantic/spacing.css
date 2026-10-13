@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/semantic/spacing.css */
+@layer tokens {
+  :root {
+    --spacing-heading: var(--size-24);
+    --spacing-typography: var(--size-24);
+  }
+}
