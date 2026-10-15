@@ -1,0 +1,17 @@
+{{- /*
+  404/hero.html overrides the core partial for its class only: this hero is
+  drawn without hero params, so it takes the dark theme every other hero gets
+  by default (see commons/hero.html). Keep it in step with hugolify-theme/v2.
+*/ -}}
+<header class="hero hero-dark">
+  <div class="container">
+    <div class="row">
+      <div class="hero-content">
+        <h1>{{ i18n "page404.title" }}</h1>
+        <p>{{ i18n "page404.text" }}</p>
+      </div>
+      <div class="hero-media">
+      </div>
+    </div>
+  </div>
+</header>

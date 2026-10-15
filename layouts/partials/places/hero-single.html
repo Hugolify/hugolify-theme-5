@@ -1,0 +1,20 @@
+{{- /*
+  places/hero-single.html overrides the places module's partial for its class
+  only: this hero is drawn without hero params, so it takes the dark theme
+  every other hero gets by default (see commons/hero.html). Keep it in step
+  with hugolify-theme-places/v2.
+*/ -}}
+<header class="hero hero-dark hero-with-second-content" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
+  <div class="container">
+    <div class="row">
+      <div class="hero-content">
+        <h1>{{ partial "func/PrepareHTML.html" .Title }}</h1>
+        {{ partial "commons/description.html" . }}
+        {{ partial "places/address.html" . }}
+      </div>
+      <div class="hero-content">
+        {{ partial "places/contact-card.html" . }}
+      </div>
+    </div>
+  </div>
+</header>

@@ -3,9 +3,6 @@
 /* theme/components/hero.css */
 @layer tokens {
   :root {
-    --hero-color-background: var(--color-black);
-    --hero-color-link: var(--color-white);
-    --hero-color-text: var(--color-white);
     --hero-height: auto;
     --hero-home-height: auto;
     --hero-home-min-height: calc(37.5rem - var(--header-height));
@@ -13,8 +10,7 @@
     --hero-home-title-font-size: min(1.725rem + 5.7vw, 6rem);
     --hero-media-brightness: 0.3;
     --hero-max-height: none;
-    --hero-title-color: var(--color-white);
-    --hero-contact-card-opacity: 0.125;
+    --hero-card-opacity: 0.125;
     --hero-min-height: calc(25rem - var(--header-height));
     --hero-min-height-tablet: calc(31.25rem - var(--header-height));
     --hero-padding-block-end: min(1.625rem + 4.5vw, 5rem);

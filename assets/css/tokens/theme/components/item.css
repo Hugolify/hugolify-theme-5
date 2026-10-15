@@ -16,5 +16,6 @@
     --item-cover-title-font-size: var(--size-20);
     --item-cover-title-font-weight: var(--font-weight-bold);
     --item-cover-title-line-height: var(--line-height-tight);
+    --person-media-max-width: 100%;
   }
 }

@@ -1,12 +1,13 @@
 /* theme/components/hero.css */
 /*
- * The hero of theme 5: black, and slid under the floating header, which shows
- * over it. The container hands the header's height back as padding, so the
- * content still starts under the header.
+ * The hero of theme 5 slides under the floating header, which shows over it.
+ * The container hands the header's height back as padding, so the content
+ * still starts under the header.
  *
  * Every page has one: layouts/partials/commons/hero.html builds it from the
  * title, the description and the image of the page when the front matter has
- * no hero.
+ * no hero. Its colours come from its theme class, dark unless the admin picks
+ * another one (see commons/hero.html).
  */
 @layer components {
   .hero {

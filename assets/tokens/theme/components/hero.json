@@ -1,27 +1,10 @@
 {
   "hero": {
-    "color": {
-      "background": {
-        "$value": "{color.black}",
-        "$type": "color",
-        "$description": "$hero-background-color #000."
-      },
-      "link": {
-        "$value": "{color.white}",
-        "$type": "color",
-        "$description": "$hero-color #FFF."
-      },
-      "text": {
-        "$value": "{color.white}",
-        "$type": "color",
-        "$description": "$hero-color #FFF."
-      }
-    },
-    "contactCard": {
+    "card": {
       "opacity": {
         "$value": "0.125",
         "$type": "number",
-        "$description": "#FFFFFF20: the contact card in the hero of a person is a veil of the hero text colour, see theme/pages/person.css."
+        "$description": "#FFFFFF20: a card in the hero (contact card of a person, a place) is a veil of the hero text colour, a little denser than the design system's --theme-card-opacity (components/hero-theme.css)."
       }
     },
     "height": {
@@ -81,12 +64,6 @@
       "$value": "min(1.625rem + 4.5vw, 5rem)",
       "$type": "dimension",
       "$description": "$global-spacing 5rem under the content, RFS like the SASS theme's padding-bottom. Flat rather than under padding.block, which @uncinq/component-tokens already defines as a token."
-    },
-    "title": {
-      "color": {
-        "$value": "{color.white}",
-        "$type": "color"
-      }
     }
   }
 }

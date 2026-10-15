@@ -14,6 +14,7 @@
 
 /* Base */
 @import './theme/base/fonts.css';
+@import './theme/base/shadow.css';
 @import './theme/base/typography.css';
 
 /* Layouts */
@@ -34,5 +35,4 @@
 
 /* Pages */
 @import './theme/pages/home.css';
-@import './theme/pages/person.css';
 @import './theme/pages/post.css';

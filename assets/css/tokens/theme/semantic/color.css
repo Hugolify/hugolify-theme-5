@@ -14,11 +14,12 @@
     --color-gray-900: oklch(21.78% 0 0);
     --color-brand: var(--color-black);
     --color-brand-hover: var(--color-gray-800);
-    --color-brand-muted: var(--color-gray-100);
+    --color-brand-muted: var(--color-gray-200);
     --color-brand-strong: var(--color-black);
     --color-heading: var(--color-text);
     --color-light: var(--color-gray-100);
     --color-light-hover: var(--color-gray-200);
-    --color-shadow-offset: var(--color-gray-200);
+    --color-shadow-offset: oklch(from var(--color-background-muted) calc(l - var(--color-shadow-offset-step)) c h);
+    --color-shadow-offset-step: 0.04;
   }
 }

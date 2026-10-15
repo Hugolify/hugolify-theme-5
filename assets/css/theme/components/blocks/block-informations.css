@@ -1,10 +1,11 @@
 /* theme/components/blocks/block-informations.css */
 @layer components {
-  /* A tinted surface and the flat offset shadow of theme 5. An information
-     with an image is drawn as a cover card instead, see theme/components/item.css. */
+  /* A tinted surface and the flat offset shadow of theme 5, the card of the
+     block theme when the block has one. An information with an image is
+     drawn as a cover card instead, see theme/components/item.css. */
   .block-informations .item {
     --item-border-width: var(--border-width-none);
-    --item-color-background: var(--color-background-muted);
+    --item-color-background: var(--theme-card-color-background, var(--color-background-muted));
     --item-shadow: var(--shadow-offset);
     --item-shadow-hover: var(--shadow-offset);
   }

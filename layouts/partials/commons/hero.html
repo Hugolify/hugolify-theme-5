@@ -5,7 +5,8 @@
   A page with a hero in its front matter gets it, as in the core. Any other
   page gets one built from its own title and description, with its image laid
   behind as a darkened cover. commons/heading.html is emptied for the same
-  reason: the title is already in the hero.
+  reason: the title is already in the hero. Every hero is dark unless its
+  front matter picks another theme.
 
   The rest is the core partial, copied because a partial cannot call the file
   it shadows: keep it in step with hugolify-theme/v2.
@@ -36,6 +37,14 @@
       {{- $hero = merge $hero (dict "image" (merge . (dict "background_image" true "darken" true))) -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
+
+{{- /* Dark unless the page picks another theme in the admin (hero > ui >
+       theme): the theme class carries the colours, see
+       hugolify-theme-design-system's components/hero-theme.css. */ -}}
+{{- $ui := $hero.ui | default dict -}}
+{{- if not $ui.theme -}}
+  {{- $hero = merge $hero (dict "ui" (merge $ui (dict "theme" "dark"))) -}}
 {{- end -}}
 
 {{- /* Expose the page kind in the hero context, which is rebound to the hero */ -}}

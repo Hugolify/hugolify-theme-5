@@ -86,9 +86,14 @@
     },
     "shadow": {
       "offset": {
-        "$value": "{color.gray.200}",
+        "$value": "oklch(from {color.background.muted.default} calc(l - {color.shadow.offsetStep}) c h)",
         "$type": "color",
-        "$description": "$shadow-color #E6E6E6: the flat shadow offset to the bottom left of the cards and of the items of the comparison, informations and testimonials blocks."
+        "$description": "$shadow-color #E6E6E6: the flat shadow offset to the bottom left of the cards and of the items of the comparison, informations and testimonials blocks, a step darker than the card it sits under (gray-200 under gray-100). A themed block or hero composes it again from its own card, see theme/base/shadow.css."
+      },
+      "offsetStep": {
+        "$value": "0.04",
+        "$type": "number",
+        "$description": "How much darker than the card the offset shadow is, in oklch lightness: the step from gray-100 to gray-200."
       }
     }
   }
