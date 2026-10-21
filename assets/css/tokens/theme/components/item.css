@@ -4,7 +4,7 @@
 @layer tokens {
   :root {
     --item-cover-color-background: var(--color-dark);
-    --item-cover-color-text: var(--color-text-on-dark);
+    --item-cover-color-text: var(--color-on-dark);
     --item-cover-gradient-color-from: var(--color-black);
     --item-cover-gradient-color-to: transparent;
     --item-cover-gradient-stop: 50%;

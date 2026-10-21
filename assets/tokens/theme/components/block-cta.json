@@ -21,7 +21,7 @@
             "$description": "--block-cta-background-color $primary. A block theme replaces it, and the two colours swap under the pointer: see theme/components/blocks/block-cta.css."
           },
           "text": {
-            "$value": "{color.text.onBrand}",
+            "$value": "{color.on.brand}",
             "$type": "color",
             "$description": "--block-cta-color white."
           }

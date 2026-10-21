@@ -28,7 +28,7 @@
     --btn-color-border: var(--color-light);
     --btn-color-border-hover: var(--color-light);
     --btn-color-text: var(--color-light);
-    --btn-color-text-hover: var(--color-text-on-light);
+    --btn-color-text-hover: var(--color-on-light);
     --item-border-radius: var(--radius-none);
     --item-border-width: var(--border-width-none);
     --item-color-background: var(--item-cover-color-background);

@@ -6,7 +6,7 @@
     --block-cta-box-border-radius: var(--radius-2xl);
     --block-cta-box-border-radius-desktop: var(--size-64);
     --block-cta-box-color-background: var(--color-brand);
-    --block-cta-box-color-text: var(--color-text-on-brand);
+    --block-cta-box-color-text: var(--color-on-brand);
     --block-cta-box-padding: var(--size-30);
     --block-cta-box-padding-desktop: var(--size-80);
   }

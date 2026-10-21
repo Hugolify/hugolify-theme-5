@@ -8,7 +8,7 @@
           "$description": "--bs-card-bg $gray-900: the card behind its image, and the whole card when there is none."
         },
         "text": {
-          "$value": "{color.text.onDark}",
+          "$value": "{color.on.dark}",
           "$type": "color",
           "$description": "--bs-card-color #FFF."
         }
