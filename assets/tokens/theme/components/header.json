@@ -53,6 +53,11 @@
           "$type": "dimension",
           "$description": "1.75rem."
         }
+      },
+      "shadow": {
+        "$value": "{shadow.md}",
+        "$type": "shadow",
+        "$description": "A soft shadow lifting the pill off the page it floats over."
       }
     },
     "padding": {

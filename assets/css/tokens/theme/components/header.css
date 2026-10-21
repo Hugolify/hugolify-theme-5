@@ -12,6 +12,7 @@
     --header-nav-color-background: var(--color-white);
     --header-nav-padding-block: var(--size-12);
     --header-nav-padding-inline: var(--size-28);
+    --header-nav-shadow: var(--shadow-md);
     --header-padding-block: var(--size-16);
     --header-padding-inline: var(--size-30);
     --header-shadow: var(--shadow-none);
