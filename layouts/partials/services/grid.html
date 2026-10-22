@@ -1,5 +1,7 @@
+{{- /* services/grid.html: no heading-single, the title is in the hero */ -}}
 <div class="grid">
-  {{ partial "services/content" . }}
-  {{ partial "services/sidebar" . }}
-  {{ partial "services/previous-next" . }}
+  {{ partial "services/content.html" . }}
+  {{ partial "services/sidebar.html" . }}
+  {{ partial "commons/toc.html" . }}
+  {{ partial "services/previous-next.html" . }}
 </div>

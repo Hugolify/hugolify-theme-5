@@ -1,0 +1,38 @@
+/* theme/base/shadow.css */
+@layer tokens {
+  /* The flat offset shadow is a step darker than the card it sits under
+     (tokens/theme/semantic/color.css). In a themed block or hero the card is a
+     veil of the text colour over the ground: the shadow takes that colour,
+     composited, a step down. The tokens built on it, the cover card's included,
+     are composed again there, as set on :root they are resolved with the
+     colours of the page. */
+  :where(.block-accent, .block-black, .block-dark, .block-highlight, .block-light, .block-neutral, .block-white) {
+    --color-shadow-offset: oklch(
+      from color-mix(in srgb, var(--color-text) calc(var(--block-card-opacity) * 100%), var(--block-color-background))
+      calc(l - var(--color-shadow-offset-step)) c h
+    );
+    --shadow-offset: -5px 5px 0 0 var(--color-shadow-offset);
+    --item-cover-shadow: var(--shadow-offset);
+  }
+  :where(.hero-accent, .hero-black, .hero-dark, .hero-highlight, .hero-light, .hero-neutral, .hero-white) {
+    --color-shadow-offset: oklch(
+      from color-mix(in srgb, var(--color-text) calc(var(--hero-card-opacity) * 100%), var(--hero-color-background))
+      calc(l - var(--color-shadow-offset-step)) c h
+    );
+    --shadow-offset: -5px 5px 0 0 var(--color-shadow-offset);
+    --item-cover-shadow: var(--shadow-offset);
+  }
+}
+
+@layer components {
+  /* A scrollsnap row clips what overflows it while it scrolls, the 5px of the
+     offset shadow under its items included: it gets them back as padding, given
+     back by a negative margin so the row does not move. The bleed of the row
+     already leaves room for the shadow on the left of the first item. */
+  :is(.scrollsnap, .scrollsnap-sm, .scrollsnap-md, .scrollsnap-lg, .scrollsnap-xl) {
+    margin-block-end: -5px;
+    margin-inline-start: -5px;
+    padding-block-end: 5px;
+    padding-inline-start: 5px;
+  }
+}

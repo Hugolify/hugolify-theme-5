@@ -1,1 +1,7 @@
-{{ partial "commons/latest.html" (dict "section" "projects" "limit" 4) }}
+{{- /* projects/latest.html: four items, one full row of the theme's grid.
+       Guarded, unlike the module's own: the home page calls this partial
+       whenever it exists, and this theme makes it exist even where the
+       projects module is not installed. */ -}}
+{{- if templates.Exists "partials/projects/items.html" -}}
+  {{ partial "commons/latest.html" (dict "section" "projects" "limit" 4) }}
+{{- end -}}

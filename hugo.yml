@@ -7,71 +7,108 @@ module:
     - source: static
       target: static
 
-
+# Params
+# _merge: deep on every map that already exists upstream (in hugolify-theme or
+# in a section module): what follows adds to those maps instead of standing in
+# for them, so the keys this theme leaves alone keep their default.
 params:
-  thumbnail:
-    desktop: 306x459
-    mobile: 315x473
-    scrollsnap: 242x363
+  # Hero
   hero:
-    cover: 1600x660
-    desktop: 526x220
+    _merge: deep
+    cover:
+      _merge: deep
+      desktop: '1600x660'
+    desktop: '526x220'
+
+  # Thumbnails: portrait cards, four to a row
+  thumbnail:
+    _merge: deep
+    desktop: '306x459'
+    mobile: '315x473'
+    scrollsnap: '242x363'
   casestudies:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   expertises:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   pages:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   persons:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   places:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   products:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   projects:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   posts:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   publications:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   realestates:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
   services:
+    _merge: deep
     thumbnail:
-      desktop: 306x459
-      mobile: 315x473
-      scrollsnap: 242x363
+      _merge: deep
+      desktop: '306x459'
+      mobile: '315x473'
+      scrollsnap: '242x363'
+
+  # Blocks
   blocks:
+    _merge: deep
     informations:
+      _merge: deep
       image:
+        _merge: deep
         ratio: 1.44

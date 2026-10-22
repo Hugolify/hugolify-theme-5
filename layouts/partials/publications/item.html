@@ -1,0 +1,6 @@
+{{- /* publications/item.html: the press badge and the metas move into the
+       link, over the image (see publications/item/content.html) */ -}}
+<article class="item publication" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+  {{ partial "publications/item/content.html" . }}
+  {{ partial "publications/item/media.html" . }}
+</article>

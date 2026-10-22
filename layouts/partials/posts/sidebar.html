@@ -1,11 +1,13 @@
+{{- /* posts/sidebar.html: the metas the core shows under the h1 open the
+       sidebar instead, so the sidebar is always there */ -}}
 <div class="sidebar" {{- partial "func/SetAnim.html" (dict "element" "sidebar") }}>
-  {{ partial "posts/metas" . }}
-  {{- $posts_expertises := "posts/posts_expertises.html" -}}
+  {{ partial "posts/metas.html" . }}
+  {{- $posts_expertises := "posts/posts_expertises.html" }}
   {{- if templates.Exists ( printf "partials/%s" $posts_expertises ) }}
     {{ partial $posts_expertises . }}
-  {{ end -}}
-  {{- $tags := "posts/tags.html" -}}
+  {{- end }}
+  {{- $tags := "posts/tags.html" }}
   {{- if templates.Exists ( printf "partials/%s" $tags ) }}
     {{ partial $tags . }}
-  {{ end -}}
+  {{- end }}
 </div>

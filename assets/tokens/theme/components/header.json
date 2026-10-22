@@ -1,0 +1,81 @@
+{
+  "header": {
+    "color": {
+      "background": {
+        "$value": "transparent",
+        "$type": "color",
+        "$description": "The bar is transparent and floats over the hero: the white is carried by the nav inside it."
+      },
+      "link": {
+        "$value": "{color.black}",
+        "$type": "color",
+        "$description": "$header-color #000."
+      },
+      "text": {
+        "$value": "{color.black}",
+        "$type": "color",
+        "$description": "$header-color #000."
+      }
+    },
+    "height": {
+      "default": {
+        "$value": "98px",
+        "$type": "dimension",
+        "$description": "The height the header renders at with the menu folded, the menu button and the paddings around it ($header-height-mobile was 94px). The hero slides under the header by this much, see theme/components/hero.css."
+      },
+      "expand": {
+        "$value": "106px",
+        "$type": "dimension",
+        "$description": "$header-height, once the menu is inline. Swapped in at --header-expand by theme/layouts/header.css."
+      }
+    },
+    "nav": {
+      "borderRadius": {
+        "$value": "{size.44}",
+        "$type": "dimension",
+        "$description": "2.75rem, the pill the nav is drawn as."
+      },
+      "color": {
+        "background": {
+          "$value": "{color.white}",
+          "$type": "color",
+          "$description": "$header-background-color #FFF."
+        }
+      },
+      "padding": {
+        "block": {
+          "$value": "{size.12}",
+          "$type": "dimension",
+          "$description": "0.75rem."
+        },
+        "inline": {
+          "$value": "{size.28}",
+          "$type": "dimension",
+          "$description": "1.75rem."
+        }
+      },
+      "shadow": {
+        "$value": "{shadow.md}",
+        "$type": "shadow",
+        "$description": "A soft shadow lifting the pill off the page it floats over."
+      }
+    },
+    "padding": {
+      "block": {
+        "$value": "{size.16}",
+        "$type": "dimension",
+        "$description": "1rem above and under the pill."
+      },
+      "inline": {
+        "$value": "{size.30}",
+        "$type": "dimension",
+        "$description": "$gutter-mobile 1.875rem on both sides of the pill."
+      }
+    },
+    "shadow": {
+      "$value": "{shadow.none}",
+      "$type": "shadow",
+      "$description": "No shadow under the transparent bar once it sticks."
+    }
+  }
+}

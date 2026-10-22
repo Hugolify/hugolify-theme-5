@@ -1,0 +1,81 @@
+{
+  "btn": {
+    "borderRadius": {
+      "$value": "{radius.2xl}",
+      "$type": "dimension",
+      "$description": "$btn-border-radius, $border-radius-xl 2rem."
+    },
+    "fontSize": {
+      "$value": "{fontSize.xs}",
+      "$type": "dimension",
+      "$description": "px2rem(14)."
+    },
+    "gap": {
+      "$value": "{size.8}",
+      "$type": "dimension",
+      "$description": "0.5rem between the arrow and the label."
+    },
+    "letterSpacing": {
+      "$value": "{letterSpacing.md}",
+      "$type": "dimension",
+      "$description": "0.05em. Read by theme/components/btn.css: the design system's .btn sets no letter-spacing of its own."
+    },
+    "lineHeight": {
+      "$value": "{lineHeight.normal}",
+      "$type": "number",
+      "$description": "$btn-line-height 1.5."
+    },
+    "padding": {
+      "block": {
+        "$value": "{size.12}",
+        "$type": "dimension",
+        "$description": "$input-btn-padding-y 0.75rem."
+      },
+      "inline": {
+        "$value": "{size.20}",
+        "$type": "dimension",
+        "$description": "$input-btn-padding-x 1.25rem."
+      }
+    },
+    "textTransform": {
+      "$value": "uppercase",
+      "$type": "string"
+    },
+    "icon": {
+      "default": {
+        "$value": "{icon.arrow}",
+        "$type": "string",
+        "$description": "The arrow the link-arrow mixin drew with the bootstrap-icons font, arrow-right-short."
+      },
+      "marginInlineStart": {
+        "$value": "-0.35rem",
+        "$type": "dimension",
+        "$description": "The mixin pulled the arrow into the padding of the button."
+      },
+      "size": {
+        "$value": "{size.22}",
+        "$type": "dimension",
+        "$description": "1.4rem, the icon font-size of the mixin."
+      },
+      "transition": {
+        "duration": {
+          "$value": "2s",
+          "$type": "duration",
+          "$description": "$transition-duration."
+        },
+        "easing": {
+          "$value": "cubic-bezier(0.085, 1.335, 0.285, 0.995)",
+          "$type": "cubicBezier",
+          "$description": "$transition-effect, the overshooting ease of the SASS theme."
+        }
+      },
+      "translate": {
+        "hover": {
+          "$value": "0.3rem",
+          "$type": "dimension",
+          "$description": "The arrow slides forward under the pointer."
+        }
+      }
+    }
+  }
+}

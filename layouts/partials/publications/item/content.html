@@ -1,0 +1,7 @@
+{{- /* publications/item/content.html: press badge, date and title, no
+       description and no "read more": the card is the image */ -}}
+<a href="{{ .Permalink }}" class="content">
+  {{ partial "publications/item/press.html" . }}
+  {{ partial "publications/item/metas.html" . }}
+  {{ partial "commons/item/title.html" . }}
+</a>

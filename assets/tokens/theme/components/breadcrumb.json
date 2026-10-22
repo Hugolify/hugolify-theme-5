@@ -1,0 +1,9 @@
+{
+  "breadcrumb": {
+    "fontSize": {
+      "$value": "{fontSize.2xs}",
+      "$type": "dimension",
+      "$description": "$breadcrumb-font-size 0.75rem."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/item.css */
+@layer tokens {
+  :root {
+    --item-cover-color-background: var(--color-dark);
+    --item-cover-color-text: var(--color-on-dark);
+    --item-cover-gradient-color-from: var(--color-black);
+    --item-cover-gradient-color-to: transparent;
+    --item-cover-gradient-stop: 50%;
+    --item-cover-media-ratio: 2 / 3;
+    --item-cover-metas-opacity: 0.8;
+    --item-cover-padding: var(--size-20);
+    --item-cover-shadow: var(--shadow-offset);
+    --item-cover-title-font-family: var(--font-family-text);
+    --item-cover-title-font-size: var(--size-20);
+    --item-cover-title-font-weight: var(--font-weight-bold);
+    --item-cover-title-line-height: var(--line-height-tight);
+  }
+}

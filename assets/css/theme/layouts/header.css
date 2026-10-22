@@ -1,0 +1,24 @@
+/* theme/layouts/header.css */
+/*
+ * The header floats over the hero: the bar is transparent, the nav inside it
+ * is drawn as a white pill. The hero slides under the header by
+ * --header-height, see theme/components/hero.css.
+ */
+@layer tokens {
+  /* The header grows once the menu is inline */
+  @media (--header-expand) {
+    :root {
+      --header-height: var(--header-height-expand);
+    }
+  }
+}
+
+@layer layouts {
+  header[role='banner'] > nav > .container {
+    background-color: var(--header-nav-color-background);
+    border-radius: var(--header-nav-border-radius);
+    box-shadow: var(--header-nav-shadow);
+    padding-block: var(--header-nav-padding-block);
+    padding-inline: var(--header-nav-padding-inline);
+  }
+}

@@ -1,0 +1,79 @@
+/* theme/components/items.css */
+/*
+ * The lists of cover cards (see theme/components/item.css) run on a fixed
+ * grid, one card per row, then three from --sm and four from --md, with tall
+ * gaps between the rows. The design system lets the cards fill the row from a
+ * minimum width instead.
+ *
+ * Below the carousel breakpoint the scrollsnap utility takes the grid over: it
+ * sizes each card with min(--items-min-width, --items-carousel-max-width), so
+ * the minimum width is let go to 100% and the carousel width decides alone.
+ */
+@layer components {
+  .items:is(
+    .casestudies,
+    .expertises,
+    .pages,
+    .persons,
+    .places,
+    .posts,
+    .products,
+    .projects,
+    .publications,
+    .services
+  ) {
+    --items-carousel-max-width: var(--items-cover-carousel-max-width);
+    --items-column-gap: var(--items-cover-gap-column);
+    --items-min-width: 100%;
+    --items-row-gap: var(--items-cover-gap-row);
+    grid-template-columns: repeat(var(--items-cover-cols), minmax(0, 1fr));
+
+    @media (--sm) {
+      --items-carousel-max-width: var(--items-cover-carousel-max-width-tablet);
+      --items-row-gap: var(--items-cover-gap-row-tablet);
+      grid-template-columns: repeat(
+        var(--items-cover-cols-tablet),
+        minmax(0, 1fr)
+      );
+    }
+
+    @media (--md) {
+      grid-template-columns: repeat(
+        var(--items-cover-cols-desktop),
+        minmax(0, 1fr)
+      );
+    }
+  }
+
+  /* A latest block holding fewer cards than the row gathers them in its
+     middle: fixed tracks, the empty ones collapsed. */
+  .block-latest
+    .items:is(
+      .casestudies,
+      .expertises,
+      .pages,
+      .persons,
+      .places,
+      .posts,
+      .products,
+      .projects,
+      .publications,
+      .services
+    ) {
+    @media (--sm) {
+      --items-cols: var(--items-cover-cols-tablet);
+      grid-template-columns: repeat(
+        auto-fit,
+        calc(
+          (100% - var(--items-column-gap) * (var(--items-cols) - 1)) /
+            var(--items-cols)
+        )
+      );
+      justify-content: center;
+    }
+
+    @media (--md) {
+      --items-cols: var(--items-cover-cols-desktop);
+    }
+  }
+}

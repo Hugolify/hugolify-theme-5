@@ -1,0 +1,12 @@
+/* theme/base/typography.css */
+@layer base {
+  /* The blockquote of the content is set like the quote block: large,
+     upright, in the font of the headings. css-base reads no token for it,
+     so the --quote-* tokens are read here. */
+  blockquote {
+    font-family: var(--quote-font-family);
+    font-size: var(--quote-font-size);
+    font-style: var(--quote-font-style);
+    line-height: var(--quote-line-height);
+  }
+}

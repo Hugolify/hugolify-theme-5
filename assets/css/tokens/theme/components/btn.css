@@ -1,0 +1,21 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/btn.css */
+@layer tokens {
+  :root {
+    --btn-font-size: var(--font-size-xs);
+    --btn-gap: var(--size-8);
+    --btn-line-height: var(--line-height-normal);
+    --btn-padding-inline: var(--size-20);
+    --btn-padding-block: var(--size-12);
+    --btn-text-transform: uppercase;
+    --btn-border-radius: var(--radius-2xl);
+    --btn-letter-spacing: var(--letter-spacing-md);
+    --btn-icon: var(--icon-arrow);
+    --btn-icon-margin-inline-start: -0.35rem;
+    --btn-icon-size: var(--size-22);
+    --btn-icon-transition-duration: 2s;
+    --btn-icon-transition-easing: cubic-bezier(0.085, 1.335, 0.285, 0.995);
+    --btn-icon-translate-hover: 0.3rem;
+  }
+}

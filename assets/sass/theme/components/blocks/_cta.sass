@@ -6,7 +6,8 @@
     @include margin-top($global-spacing)
     background-color: transparent
     padding: 0
-    .container > div
+    // The panel, see layouts/partials/blocks/templates/cta.html
+    .block-cta-box
         background-color: var(--block-cta-background-color)
         border-radius: $border-radius-xl
         color: var(--block-cta-color)
@@ -25,6 +26,8 @@
                     --bs-heading-color: var(--block-cta-color)
     .heading
         @include margin-bottom($global-spacing-semi)
+    .surtitle
+        color: var(--block-cta-color)
     .cta
         justify-content: center
     

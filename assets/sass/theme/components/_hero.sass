@@ -7,10 +7,13 @@
     .container
         padding-top: var(--header-height)
     
-    .btn:first-of-type
-        @include button-variant(white,white)
-    .btn + .btn
-        @include button-outline-variant(white)
+    // White buttons on the black hero. A light hero theme (hero.ui.theme)
+    // keeps the dark buttons of the core.
+    &:not(.hero-highlight):not(.hero-light):not(.hero-white)
+        .btn:first-of-type
+            @include button-variant(white,white)
+        .btn + .btn
+            @include button-outline-variant(white)
 
     &-media
         @extend .col-xl-5

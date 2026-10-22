@@ -1,0 +1,11 @@
+{
+  "container": {
+    "maxWidth": {
+      "desktop": {
+        "$value": "90rem",
+        "$type": "dimension",
+        "$description": "1440px, i.e. 1320px of content between 60px gutters, the $container-max-widths xxl of the SASS theme. The design system caps at 1600px."
+      }
+    }
+  }
+}

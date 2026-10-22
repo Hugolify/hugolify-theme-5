@@ -1,0 +1,13 @@
+/* theme/components/publication.css */
+@layer components {
+  /* The press badge runs in the text of the cover card, over the date, where
+     the publications module pins it to the top corner of the image. It is set
+     light, the way the SASS theme drew it. */
+  .item.publication .press {
+    --badge-font-weight: var(--font-weight-normal);
+    order: 0;
+    padding: 0;
+    pointer-events: auto;
+    position: static;
+  }
+}

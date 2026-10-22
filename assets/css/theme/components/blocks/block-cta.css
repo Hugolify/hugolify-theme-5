@@ -1,0 +1,141 @@
+/* theme/components/blocks/block-cta.css */
+/*
+ * The call to action of theme 5 is a rounded panel inside the container, black
+ * by default, its content centred. The panel is .block-cta-box, an element the
+ * design system knows nothing about: see layouts/partials/blocks/templates/cta.html.
+ *
+ * A block theme colours the panel rather than the section, which stays on the
+ * page ground.
+ *
+ * A panel holding a single button is a link as a whole: the button stretches
+ * an invisible ::after over the panel, and the panel turns over under the
+ * pointer, its two colours swapped. With several buttons, each one stays its
+ * own target and the panel stays put.
+ */
+@layer components {
+  .block-cta {
+    background: none;
+  }
+
+  .block-cta:is(
+    .block-accent,
+    .block-black,
+    .block-dark,
+    .block-highlight,
+    .block-light,
+    .block-neutral,
+    .block-white
+  ) {
+    --block-cta-box-color-background: var(--block-color-background);
+    --block-cta-box-color-text: var(--color-text);
+    color: inherit;
+  }
+
+  /* With its section left on the page ground, a themed call to action spaces
+     out like an unthemed block: the design system only closes the gap between
+     two unthemed blocks, or two blocks of the same theme. */
+  :is(
+      .block:not(
+        .block-accent,
+        .block-black,
+        .block-dark,
+        .block-highlight,
+        .block-light,
+        .block-neutral,
+        .block-white
+      ),
+      .block-cta
+    )
+    + .block-cta,
+  .block-cta
+    + .block:not(
+      .block-accent,
+      .block-black,
+      .block-dark,
+      .block-highlight,
+      .block-light,
+      .block-neutral,
+      .block-white
+    ) {
+    padding-block-start: var(--block-theme-padding-top, 0);
+  }
+
+  .block-cta-box {
+    --color-heading: var(--block-cta-box-color-text);
+    --color-link: var(--block-cta-box-color-text);
+    --color-text: var(--block-cta-box-color-text);
+    --surtitle-color-text: var(--block-cta-box-color-text);
+    background-color: var(--block-cta-box-color-background);
+    border-radius: var(--block-cta-box-border-radius);
+    color: var(--color-text);
+    display: grid;
+    gap: var(--block-gap);
+    padding: var(--block-cta-box-padding);
+    position: relative;
+    text-align: center;
+
+    @media (--md) {
+      border-radius: var(--block-cta-box-border-radius-desktop);
+      padding: var(--block-cta-box-padding-desktop);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: var(--transition-color);
+    }
+
+    .heading {
+      align-items: center;
+
+      h2,
+      p {
+        margin-inline: auto;
+      }
+    }
+
+    .cta {
+      justify-content: center;
+    }
+
+    /* The buttons read the colours of the panel: the first one solid, the
+       others outlined */
+    .btn {
+      --btn-color-background: var(--block-cta-box-color-text);
+      --btn-color-background-hover: var(--block-cta-box-color-background);
+      --btn-color-border: var(--block-cta-box-color-text);
+      --btn-color-border-hover: var(--block-cta-box-color-text);
+      --btn-color-text: var(--block-cta-box-color-background);
+      --btn-color-text-hover: var(--block-cta-box-color-text);
+    }
+
+    .btn + .btn {
+      --btn-color-background: transparent;
+      --btn-color-background-hover: var(--block-cta-box-color-text);
+      --btn-color-text: var(--block-cta-box-color-text);
+      --btn-color-text-hover: var(--block-cta-box-color-background);
+    }
+
+    /* A single button stretches over the panel. Its ::after is otherwise the
+       external link icon, hence the mask and the size taken back. */
+    .cta:not([role='group']) .btn::after {
+      background-color: transparent;
+      content: '';
+      height: auto;
+      inset: 0;
+      margin: 0;
+      mask: none;
+      position: absolute;
+      width: auto;
+      z-index: 1;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .block-cta-box:has(.cta:not([role='group'])):hover {
+      --color-heading: var(--block-cta-box-color-background);
+      --color-link: var(--block-cta-box-color-background);
+      --color-text: var(--block-cta-box-color-background);
+      --surtitle-color-text: var(--block-cta-box-color-background);
+      background-color: var(--block-cta-box-color-text);
+    }
+  }
+}

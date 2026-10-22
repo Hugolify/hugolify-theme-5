@@ -1,0 +1,15 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* theme/components/items.css */
+@layer tokens {
+  :root {
+    --items-cover-carousel-max-width: 85vw;
+    --items-cover-carousel-max-width-tablet: 45vw;
+    --items-cover-cols: 1;
+    --items-cover-cols-tablet: 3;
+    --items-cover-cols-desktop: 4;
+    --items-cover-gap-column: var(--size-24);
+    --items-cover-gap-row: var(--size-40);
+    --items-cover-gap-row-tablet: var(--size-80);
+  }
+}

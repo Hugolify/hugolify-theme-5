@@ -1,0 +1,14 @@
+{
+  "surtitle": {
+    "fontSize": {
+      "$value": "{fontSize.2xs}",
+      "$type": "dimension",
+      "$description": "0.75rem."
+    },
+    "fontWeight": {
+      "$value": "{fontWeight.normal}",
+      "$type": "fontWeight",
+      "$description": "The surtitle is light, where the design system sets it in bold."
+    }
+  }
+}

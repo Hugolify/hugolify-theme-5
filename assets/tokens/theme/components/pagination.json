@@ -1,0 +1,11 @@
+{
+  "pagination": {
+    "item": {
+      "borderRadius": {
+        "$value": "{radius.none}",
+        "$type": "dimension",
+        "$description": "$pagination-border-radius 0: square pages."
+      }
+    }
+  }
+}
