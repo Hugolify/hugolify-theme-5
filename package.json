@@ -32,14 +32,14 @@
   },
   "devDependencies": {
     "@hugolify/prettier-config": "^0.3.1",
-    "@uncinq/component-tokens": "^1.12.0",
-    "@uncinq/design-tokens": "^1.8.4",
+    "@uncinq/component-tokens": "^1.13.0",
+    "@uncinq/design-tokens": "^1.10.0",
     "style-dictionary": "^5.0.0"
   },
   "peerDependencies": {
-    "@uncinq/component-tokens": "^1.12.0",
+    "@uncinq/component-tokens": "^1.13.0",
     "@uncinq/css-base": "^1.12.0",
     "@uncinq/css-components": "^1.22.1",
-    "@uncinq/design-tokens": "^1.8.4"
+    "@uncinq/design-tokens": "^1.10.0"
   }
 }

@@ -59,9 +59,9 @@
         "$description": "$secondary #333."
       },
       "muted": {
-        "$value": "{color.gray.100}",
+        "$value": "{color.gray.200}",
         "$type": "color",
-        "$description": "$light."
+        "$description": "One step darker than $light. The design system's muted accent follows it."
       },
       "strong": {
         "$value": "{color.black}",

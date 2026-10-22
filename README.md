@@ -62,7 +62,9 @@ npm install
 npm run build
 ```
 
-This writes `assets/css/tokens/theme/**.css` plus the `assets/css/tokens/theme.css` barrel, both committed: Hugo reads the generated CSS, never the JSON. Run it after touching any token file.
+This writes `assets/css/tokens/theme/**.css` plus the `assets/css/tokens/theme.css` barrel, both committed: Hugo reads the generated CSS, never the JSON. Run it after touching any token file, and never edit the generated CSS by hand: the next build overwrites it.
+
+These tools only build the tokens here, a site never needs them: `hugo mod npm pack` reads `package.hugo.json`, which lists no dependency, instead of `package.json`.
 
 Hand-written CSS lives in `assets/css/theme/` and is imported by `assets/css/theme.css`. Values that are design decisions belong in a token file, not in the CSS; each token names the SASS variable it replaces.
 

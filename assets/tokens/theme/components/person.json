@@ -1,0 +1,11 @@
+{
+  "person": {
+    "media": {
+      "maxWidth": {
+        "$value": "100%",
+        "$type": "dimension",
+        "$description": "The persons module caps the portrait at 100px; in theme 5 a person is a cover card like the other items (see theme/components/item.css), so the image fills it."
+      }
+    }
+  }
+}

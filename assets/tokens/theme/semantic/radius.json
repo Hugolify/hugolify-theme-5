@@ -6,9 +6,9 @@
       "$description": "$border-radius 0.25rem, the fields and the small controls. The buttons are pills, see components/btn.json."
     },
     "surface": {
-      "$value": "{radius.none}",
+      "$value": "{radius.sm}",
       "$type": "dimension",
-      "$description": "$card-border-radius 0: the cards and the panels of theme 5 are square. The call to action and the header carry their own radius."
+      "$description": "$border-radius-sm 0.5rem: the submenus of the header navigation, the dropdowns, the modals, the details and the quotes of the testimonials block. The cover cards stay square ($card-border-radius 0, see theme/components/item.css); the call to action and the header carry their own radius."
     }
   }
 }
