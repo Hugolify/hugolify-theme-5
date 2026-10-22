@@ -45,7 +45,8 @@ Add this import in `assets/sass/main.sass`
 
 ## Live demo
 
-https://theme-5--hugolify-demo.netlify.app/
+- https://theme-5-design-system--hugolify-demo.netlify.app `v2 — design system`
+- https://theme-5--hugolify-demo.netlify.app/ `v1 — Bootstrap`
 
 ## Documentation
 
