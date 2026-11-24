@@ -83,6 +83,15 @@
       transition: var(--transition-color);
     }
 
+    /* The text inherits the colour of the panel and fades with it, but the
+       title and the surtitle set their own colour from a custom property,
+       which swaps at once: they get the transition of the panel. */
+    :is(h1, h2, h3, h4, h5, h6, .surtitle) {
+      @media (prefers-reduced-motion: no-preference) {
+        transition: var(--transition-color);
+      }
+    }
+
     .heading {
       align-items: center;
 
@@ -115,17 +124,26 @@
     }
 
     /* A single button stretches over the panel. Its ::after is otherwise the
-       external link icon, hence the mask and the size taken back. */
-    .cta:not([role='group']) .btn::after {
-      background-color: transparent;
-      content: '';
-      height: auto;
-      inset: 0;
-      margin: 0;
-      mask: none;
-      position: absolute;
-      width: auto;
-      z-index: 1;
+       external link icon, hence the mask and the size taken back, and the
+       align-self: center of button.css undone: in the inline-flex button it
+       shrinks the absolute ::after to 0px high, and the panel is then neither
+       a link nor does it hover the button. On the panel turned over, the
+       border of the button follows its background. */
+    .cta:not([role='group']) .btn {
+      --btn-color-border-hover: var(--block-cta-box-color-background);
+
+      &::after {
+        align-self: stretch;
+        background-color: transparent;
+        content: '';
+        height: auto;
+        inset: 0;
+        margin: 0;
+        mask: none;
+        position: absolute;
+        width: auto;
+        z-index: 1;
+      }
     }
   }
 
