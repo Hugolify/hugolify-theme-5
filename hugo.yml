@@ -19,6 +19,22 @@ params:
       _merge: deep
       desktop: '1600x660'
     desktop: '526x220'
+    # Every page opens on a hero: a page whose front matter has none gets one
+    # built from its title and description, its image laid behind as a
+    # darkened cover (the core's func/GetHero)
+    fallback:
+      _merge: deep
+      enable: true
+      image:
+        _merge: deep
+        background: true
+        darken: true
+    # Dark unless the page picks another theme in the admin (hero > ui >
+    # theme): the theme class carries the colours, see
+    # hugolify-theme-design-system's components/hero-theme.css
+    ui:
+      _merge: deep
+      theme: dark
 
   # Thumbnails: portrait cards, four to a row
   thumbnail:

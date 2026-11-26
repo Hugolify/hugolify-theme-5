@@ -27,6 +27,13 @@ imports:
 
 With **hugolify-theme-design-system** the theme comes from `assets/css/` and `assets/tokens/`; with **hugolify-theme-bootstrap** it comes from `assets/sass/`.
 
+**Minimum versions:** every page opens on a dark hero through the core's `params.hero.fallback` and `params.hero.ui`, which need:
+
+- hugolify-theme **v2.81.0** or later
+- hugolify-theme-persons **v2.15.0** and hugolify-theme-places **v2.8.0** or later, if the site imports them: from these versions their single-page heroes take the `params.hero.ui` theme too, older ones keep the hero's default colours
+
+Update with `hugo mod get github.com/hugolify/hugolify-theme/v2@latest` (same for the section modules).
+
 ### V1
 
 ```yml
